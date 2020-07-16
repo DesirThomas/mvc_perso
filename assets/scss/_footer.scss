@@ -1,0 +1,13 @@
+body {
+    footer {
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: $black_t;
+        border-top: 4px solid $black;
+        text-align: center;
+
+        .copyrights {
+            font-size: 0.8rem;
+        }
+    }
+}

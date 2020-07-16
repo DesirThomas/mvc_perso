@@ -1,0 +1,12 @@
+body {
+    .container {
+        margin: 2rem 3rem 3rem 2rem;
+        padding: 1rem;
+        background-color: $dark;
+        border-top: 4px solid $black;
+        border-right: 12px solid $black;
+        border-bottom: 4px solid $black;
+        border-left: 12px solid $black;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .4);
+    }
+}

@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /hotel_nice
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !-d
+RewriteCond %{REQUEST_URI} !(\.png|\.jpg|\.gif|\.jpeg|\.css|\.js|\.ttf|\.webmanifest|\.txt|\.map)$
+RewriteRule . index.php [L]
+</IfModule>
