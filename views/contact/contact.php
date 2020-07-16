@@ -1,3 +1,3 @@
-<?php require('views/templates/header.php');?>    
+<?php require('views/templates/_header.php');?>    
     <h1>Nous Contacter</h1>
-<?php require('views/templates/footer.php');?>
+<?php require('views/templates/_footer.php');?>
