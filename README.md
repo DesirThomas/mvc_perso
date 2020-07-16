@@ -33,6 +33,6 @@ Visual Studio Code
 Copier "**bdd-sample.php**" et renommez votre copie en "**bdd.php**".
 Configurez-le.
 
-5. Importer le fichier ".sql" via *PhPMyAdmin*.
+5. (Ignorez cette étape, il n'y a pas encore de BDD utilisée dans ce projet) Importer le fichier ".sql" via *PhPMyAdmin*. 
 
 6. Yay. Vous devriez être bon.
