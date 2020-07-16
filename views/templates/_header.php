@@ -26,4 +26,4 @@
             <a href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" height="90px" alt="logo"></i></a>
         </header>
         
-		<main>
+		<main class="container">
