@@ -33,6 +33,15 @@ html {
                     color: $a-hover;
                 }
             }
+
+            &.a-nav{
+                color: $a-nav;
+                text-decoration: none;
+
+                &:hover {
+                    color: $a-nav-hover;
+                }
+            }
         }
 
         button {

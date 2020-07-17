@@ -12,11 +12,11 @@
         <meta name="description" content="Le site personnel de Désir Thomas, Développeur Web Junior." />
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo SITE_DIR;?>apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo SITE_DIR;?>favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo SITE_DIR;?>favicon-16x16.png">
+        <link rel="manifest" href="<?php echo SITE_DIR;?>site.webmanifest">
+        <link rel="mask-icon" href="<?php echo SITE_DIR;?>safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#25d2d0">
         <meta name="theme-color" content="#ffffff">
         
@@ -41,20 +41,22 @@
     <body>
 		<header>
             <div class="logo_h1">
-                <a href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" alt="logo"></i></a>
+                <a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" alt="logo"></i></a>
                 <h1><?php if(!empty($pageTitle)) echo $pageTitle ?></h1>
             </div>
 
-
-                <a href="javascript:void(0);" class="burger" onclick="burger()">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <nav id="navList">
-                    <ul>
-                        <li><a href="<?php echo SITE_DIR;?>">Accueil</a></li>
-                        <li><a href="<?php echo SITE_DIR;?>contact/">Contact</a></li>
-                    </ul>
-                </nav>
+            <a href="javascript:void(0);" class="burger" onclick="burger()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <nav id="navList">
+                <ul>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-vial"></i> Accueil</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="far fa-user-circle"></i> Biographie</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="far fa-keyboard"></i> Compétences</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-award"></i> Portfolio</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>contact/"><i class="far fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
 
         </header>
         
