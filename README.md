@@ -30,7 +30,7 @@ Visual Studio Code
 3. Activer *Live Sass Compiler* en cliquant sur "*Watch Sass*" présent -plus ou moins ?- en bas à droite de Visual Studio Code. Pensez à le ré-actualiser si jamais le CSS se comporte étrangement, il peut en avoir besoin.
 
 4. Dans "**/config/**" :
-Copier "**bdd-sample.php**" et renommez votre copie en "**bdd.php**".
+Copier "**database-sample.php**" et renommez votre copie en "**database.php**".
 Configurez-le.
 
 5. (Ignorez cette étape, il n'y a pas encore de BDD utilisée dans ce projet) Importer le fichier ".sql" via *PhPMyAdmin*. 

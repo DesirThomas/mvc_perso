@@ -1,0 +1,30 @@
+form {
+    .form_row {
+        display: flex;
+        margin-bottom: 1rem;
+
+        label {
+            order: 1;
+            padding: 0.5rem 1rem;
+            width: 25vw;
+            text-align: right;
+        }
+
+        input,
+        textarea {
+            order: 2;
+            padding: 0.5rem 1rem;
+            width: 400px;
+        }
+
+        & *[required] ~ label:after {
+            content: " *";
+            color: red;
+        }
+    }
+
+    .form_row_centered {
+        text-align: center;
+    }
+     
+}

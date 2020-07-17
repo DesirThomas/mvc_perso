@@ -1,7 +1,7 @@
 body {
     .container {
         margin: 2rem 0 3rem 0;
-        padding: 1rem;
+        min-height: 55vh;
         background-color: $dark;
         border-top: 4px solid $black;
         border-right: none;
@@ -13,5 +13,22 @@ body {
             border-right: 12px solid $black;
             border-left: 12px solid $black;
         }
+
+        .h2 {
+            display: flex;
+            margin: 0 0 1rem 0;
+            padding: 1rem 1rem;
+            background-color: $black_t;
+            
+            h2,
+            p {
+                display: inline;
+                margin: 0 2px;
+                font-size: 1rem;
+                font-weight: normal;
+            }
+        }
+
+        // <div content>
     }
 }

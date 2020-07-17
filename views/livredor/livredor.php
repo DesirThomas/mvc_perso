@@ -1,6 +1,6 @@
 <?php require('views/templates/_header.php');?>
+<?php require('views/templates/_title.php');?>
 
-            <h2>Vue "Ça va être rigolo ça..."</h2>
             <a href="<?php echo SITE_DIR;?>"><i class="fas fa-vial"></i> Accueil</a>
 
             <!-- Content -->

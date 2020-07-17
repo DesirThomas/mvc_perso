@@ -1,6 +1,6 @@
 <?php require('views/templates/_header.php');?>
+<?php require('views/templates/_title.php');?>
 
-            <h2>Vue Skill</h2>
             <a href="<?php echo SITE_DIR;?>"><i class="fas fa-vial"></i> Accueil</a>
 
             <!-- Content -->

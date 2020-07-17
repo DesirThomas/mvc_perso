@@ -1,7 +1,7 @@
 <?php
 
 function indexAction() {
-    $pageTitle = 'Accueil';
+    $pageTitle = 'Bienvenue';
     require('views/accueil/index.php');
 }
 

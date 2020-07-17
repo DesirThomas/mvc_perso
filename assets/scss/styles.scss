@@ -1,3 +1,7 @@
+/* Where h* ?
+h1 (_header.scss)
+h2 (_content.scss) */
+
 // Base Imports
 @import "variables/fonts";
 @import "variables/colors";
@@ -7,6 +11,7 @@
 @import "header";
 @import "content";
 @import "footer";
+@import "form";
 
 // Basic Layout
 html {
