@@ -12,7 +12,14 @@
         <meta name="description" content="Le site personnel de Désir Thomas, Développeur Web Junior." />
 
         <!-- Favicons -->
-
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#25d2d0">
+        <meta name="theme-color" content="#ffffff">
+        
         <!-- API / CSS -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"/>
         <link rel="stylesheet" href="<?php echo SITE_DIR;?>assets/css/styles.min.css" />
@@ -22,10 +29,10 @@
         <script>
 			function burger() {
 				let nav = document.getElementById("navList");
-				if (nav.style.display === "block") {
+				if (nav.style.display === "inline") {
 					nav.style.display = "";
 				} else {
-					nav.style.display = "block";
+					nav.style.display = "inline";
 				}
 			}
 		</script>
