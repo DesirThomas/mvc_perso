@@ -42,6 +42,15 @@ html {
                     color: $a-nav-hover;
                 }
             }
+
+            &.a-gold{
+                color: $a-gold;
+                text-decoration: none;
+
+                &:hover {
+                    color: $a-gold-hover;
+                }
+            }
         }
 
         button {

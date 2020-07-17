@@ -51,10 +51,10 @@
             <nav id="navList">
                 <ul>
                     <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-vial"></i> Accueil</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="far fa-user-circle"></i> Biographie</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="far fa-keyboard"></i> Compétences</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-award"></i> Portfolio</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>contact/"><i class="far fa-envelope"></i> Contact</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/bio/"><i class="far fa-user-circle"></i> Biographie</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/competence/"><i class="far fa-keyboard"></i> Compétences</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/portfolio/"><i class="fas fa-award"></i> Portfolio</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/contact/"><i class="far fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
 
