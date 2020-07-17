@@ -23,7 +23,10 @@
 
     <body>
 		<header>
-            <a href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" height="90px" alt="logo"></i></a>
+            <div class="logo_h1">
+                <a href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" alt="logo"></i></a>
+                <h1><?php if(!empty($pageTitle)) echo $pageTitle ?></h1>
+            </div>
         </header>
         
 		<main class="container">

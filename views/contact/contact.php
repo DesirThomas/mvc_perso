@@ -1,3 +1,3 @@
 <?php require('views/templates/_header.php');?>    
-    <h1>Contact</h1>
+    <h2>View Contact</h2>
 <?php require('views/templates/_footer.php');?>
