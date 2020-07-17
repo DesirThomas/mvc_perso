@@ -1,12 +1,17 @@
 body {
     .container {
-        margin: 2rem 3rem 3rem 2rem;
+        margin: 2rem 0 3rem 0;
         padding: 1rem;
         background-color: $dark;
         border-top: 4px solid $black;
-        border-right: 12px solid $black;
+        border-right: none;
         border-bottom: 4px solid $black;
-        border-left: 12px solid $black;
+        border-left: none;
         box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .4);
+        @include responsive('xs'){
+            margin: 2rem 3rem 3rem 2rem;
+            border-right: 12px solid $black;
+            border-left: 12px solid $black;
+        }
     }
 }

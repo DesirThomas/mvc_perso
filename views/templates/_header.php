@@ -19,6 +19,16 @@
 
         <!-- Script JS -->
         <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
+        <script>
+			function burger() {
+				let nav = document.getElementById("navList");
+				if (nav.style.display === "block") {
+					nav.style.display = "";
+				} else {
+					nav.style.display = "block";
+				}
+			}
+		</script>
     </head>
 
     <body>
@@ -27,6 +37,18 @@
                 <a href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" alt="logo"></i></a>
                 <h1><?php if(!empty($pageTitle)) echo $pageTitle ?></h1>
             </div>
+
+
+                <a href="javascript:void(0);" class="burger" onclick="burger()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <nav id="navList">
+                    <ul>
+                        <li><a href="<?php echo SITE_DIR;?>">Accueil</a></li>
+                        <li><a href="<?php echo SITE_DIR;?>contact/">Contact</a></li>
+                    </ul>
+                </nav>
+
         </header>
         
 		<main class="container">
