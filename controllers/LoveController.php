@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once( 'models/Livredor.php' );
 require_once( 'models/Login.php' );
 
@@ -32,7 +33,7 @@ function eachotherAction(){
         if( $result ) {
             // On crée la session
             $_SESSION['isLogged'] = $result['id'];
-        }
+        };
 
         // On redirige vers le tableau de bord
         Header( 'Location: ' . SITE_DIR . 'love' );

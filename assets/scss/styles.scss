@@ -3,7 +3,7 @@
  * h2 (_content.scss)
  *
  * What is define in here ?
- * a ; button
+ * a ; button ; hr
  */
 
 // Base Imports
@@ -86,6 +86,10 @@ html {
             &:focus {
                 outline: 1px solid $second-visited;
             }
+        }
+
+        hr {
+            border: 1px solid $second;
         }
     }
 }

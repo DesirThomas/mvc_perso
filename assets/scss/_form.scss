@@ -1,7 +1,13 @@
 form {
+    margin: 2rem 0;
+
     .form_row {
         display: flex;
         margin-bottom: 1rem;
+
+        &.last {
+            margin-bottom: 2rem;
+        }
 
         label {
             order: 1;
