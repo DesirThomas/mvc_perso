@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 20 juil. 2020 à 11:53
+-- Généré le : lun. 20 juil. 2020 à 17:27
 -- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
 -- Version de PHP : 7.4.8
 
@@ -64,6 +64,22 @@ INSERT INTO `lovers` (`id`, `name`, `mail`, `pass`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `messages`
+--
+
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `mail` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `portfolio`
 --
 
@@ -93,6 +109,12 @@ ALTER TABLE `lovers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `portfolio`
 --
 ALTER TABLE `portfolio`
@@ -113,6 +135,12 @@ ALTER TABLE `livredor`
 --
 ALTER TABLE `lovers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `portfolio`
