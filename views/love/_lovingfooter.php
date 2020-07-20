@@ -1,3 +1,5 @@
+        <hr class="hr-bottom" />
+    </div>
 </main>
 
 <footer>

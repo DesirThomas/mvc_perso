@@ -1,7 +1,6 @@
 <?php require("views/love/_lovingheader.php");?>
 <?php require('views/templates/_title.php');?>
 
-<hr />
 <form method="post">
     <div class="form_row">
         <input type="text" name="login" id="login" placeholder="&hearts;&hearts;&hearts;.&hearts;" required />

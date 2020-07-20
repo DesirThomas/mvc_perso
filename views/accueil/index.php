@@ -4,6 +4,8 @@
     </div>
             
     <div class="content">
+        <hr class="hr-top" />
+
         <a href="<?php echo SITE_DIR;?>"><i class="fas fa-vial"></i> Accueil</a>
 
 <?php require('views/templates/_footer.php');?>

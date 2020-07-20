@@ -3,6 +3,7 @@ form {
 
     .form_row {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 1rem;
 
         &.last {
@@ -12,17 +13,33 @@ form {
         label {
             order: 1;
             padding: 0.5rem 1rem;
-            width: 25vw;
-            text-align: right;
+            text-align: left;
+            width: 60vw;
+            color: $second;
+
+            @include responsive('sm'){
+                text-align: right;
+                width: 25vw;
+            }
         }
 
         input,
         textarea {
             order: 2;
             padding: 0.5rem 1rem;
-            width: 400px;
+            width: 100vw;
+            
             &:focus {
                 outline: 1px inset $second-visited;
+            }
+            
+            &.area-contact {
+                min-height: 50vh;
+                min-width: 50vw;
+            }
+            
+            @include responsive('sm'){
+                width: 400px;
             }
         }
 

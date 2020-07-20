@@ -3,3 +3,4 @@
             </div>
 
             <div class="content">
+                <hr class="hr-top" />

@@ -4,11 +4,11 @@
         @content;
         }
     } @else if $device == sm {
-        @media (max-width: 768px) {
+        @media (min-width: 1023px) {
         @content;
         }
     } @else if $device == md {
-        @media (max-width: 1024px) {
+        @media (min-width: 1919px) {
         @content;
         }
     } @else if $device == lg {

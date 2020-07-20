@@ -64,7 +64,7 @@ html {
 
         button,
         .button {
-            padding: 6px 1rem;
+            padding: 10px 2rem;
             color: $second;
             background-color: $black_t;
             border-top: $second_visited solid 1px;
@@ -90,6 +90,18 @@ html {
 
         hr {
             border: 1px solid $second;
+
+            &.hr-top {
+                margin-bottom: 1rem;
+            }
+
+            &.hr-mid {
+                margin: 1rem 0;
+            }
+
+            &.hr-bottom {
+                margin-top: 1rem;
+            }
         }
     }
 }

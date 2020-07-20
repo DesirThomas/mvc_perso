@@ -23,7 +23,7 @@ body {
             display: none;
             flex-basis: 100%;
             text-align: center;
-            @include responsive('xs'){
+            @include responsive('sm'){
                 display: inline;
                 flex-basis: auto;
             }
@@ -33,7 +33,7 @@ body {
                 li{
                     display: block;
                     margin: 1rem 0;
-                    @include responsive('xs'){
+                    @include responsive('sm'){
                         display: inline;
                         margin: 0 1rem;
                     }
@@ -47,7 +47,7 @@ body {
             text-align: center;
             font-size: 1rem;
             color: $white;
-            @include responsive('xs'){
+            @include responsive('sm'){
                 display: none;
             }
         }
