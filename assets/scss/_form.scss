@@ -15,6 +15,9 @@ form {
             order: 2;
             padding: 0.5rem 1rem;
             width: 400px;
+            &:focus {
+                outline: 1px inset $second-visited;
+            }
         }
 
         & *[required] ~ label:after {

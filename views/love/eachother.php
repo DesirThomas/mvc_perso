@@ -11,7 +11,7 @@
         <label for="pass">Mot de passe :</label>
     </div>
     <div class="form_row_centered">
-        <input class="button margeless" type="submit" value="Log In" name="loverconnect"/>
+        <input class="button" type="submit" value="Log In" name="loverconnect"/>
     </div>
 </form>
 
