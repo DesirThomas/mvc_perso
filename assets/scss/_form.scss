@@ -28,9 +28,13 @@ form {
             order: 2;
             padding: 0.5rem 1rem;
             width: 100vw;
+            border: 1px inset $second;
+            background-color: $dark;
+            color: $light;
+            box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, .4);
             
             &:focus {
-                outline: 1px inset $second-visited;
+                outline: 1px solid $second-visited;
             }
             
             &.area-contact {
