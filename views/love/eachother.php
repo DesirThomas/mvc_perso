@@ -1,6 +1,5 @@
 <?php require("views/love/_lovingheader.php");?>
-  
-<h2>&laquo; Don't forget to love each other &hearts; &raquo;</h2>
+<?php require('views/templates/_title.php');?>
 
 <form method="post">
     <div class="form_row">

@@ -2,6 +2,7 @@
 
 function indexAction() {
     $pageTitle = 'Bienvenue';
+    $secondTitle = 'Accueil';
     require('views/accueil/index.php');
 }
 
@@ -22,5 +23,6 @@ function competenceAction() {
 
 function portfolioAction() {
     $pageTitle = 'Portfolio';
+    $secondTitle = '#Noob';
     require('views/portfolio/portfolio.php');
 }

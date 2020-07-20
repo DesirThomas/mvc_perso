@@ -41,7 +41,7 @@
     <body>
 		<header>
             <div class="logo_h1">
-                <a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" alt="logo"></i></a>
+                <a class="a-nav" href="<?php echo SITE_DIR;?>love"><i class="fas fa-flask" alt="logo"></i></a>
                 <h1>&lsaquo;?php $h1 = "<?php if(!empty($pageTitle)) echo $pageTitle ?>";</h1>
             </div>
 
