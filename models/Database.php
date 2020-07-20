@@ -4,7 +4,7 @@ require('config/database.php');
 class Database
 {
 
-    public function getConnection()
+    public static function getConnection()
     {
         try {
             $connection = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASSWORD);
