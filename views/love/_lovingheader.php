@@ -50,7 +50,7 @@
             </a>
             <nav id="navList">
                 <ul>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/portfolio"><i class="far fa-folder-open"></i>$portfolio</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/portfolio"><i class="far fa-folder-open"></i> $portfolio</a></li>
                     <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/contact"><i class="far fa-envelope"></i> $messages </a></li>
                     <li><a class="a-gold" href="<?php echo SITE_DIR;?>love/livredor"><i class="fas fa-book"></i> $livredor </a></li>
                     <?php if( isset($_SESSION["isLogged"]) ) : ?>

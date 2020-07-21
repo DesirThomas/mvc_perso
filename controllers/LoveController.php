@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once( 'models/Contact.php' );
 require_once( 'models/Livredor.php' );
 require_once( 'models/Login.php' );
 
@@ -28,8 +29,35 @@ function portfolioAction(){
 function contactAction(){
     isLogged();
 
+    $messages      = Message::getMessages();
+
     $pageTitle = 'Gestion des messages';
     require( 'views/love/messages/messages.php' );
+}
+
+function showmessageAction(){
+    isLogged();
+
+    $requestUri     = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
+    $requestParams  = explode( '/', $requestUri );
+    $messageId = isset( $requestParams[2] ) ? $requestParams[2] : null;
+    $message = Message::getMessage($messageId);
+
+    $pageTitle = "Message n°".$message['id'];
+    require( 'views/love/messages/showmessage.php' );
+}
+
+function deletemessageAction(){
+    isLogged();
+
+    $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
+    $requestParams = explode( '/', $requestUri );
+    $messageId     = isset( $requestParams[2] ) ? $requestParams[2] : null;
+
+    Message::deleteMessage( $messageId );
+
+    Header( 'Location: ' . SITE_DIR . 'love/messages' );
+
 }
 
 function livredorAction(){

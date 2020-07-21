@@ -1,0 +1,38 @@
+.table-responsive {
+    overflow-x: auto;
+
+    table {
+    width: 100%;
+    border-collapse: collapse;
+        
+        thead{
+            tr{
+                th{
+                    padding: 0.5rem 0;
+                    border-bottom: 1px solid $second;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    padding: 0.5rem 0.5rem;
+                    border-right: 1px solid $second;
+                }
+                td:last-of-type {
+                    border-right: none;	
+                }
+            }
+        }
+
+        tfoot {
+            tr {
+                th{
+                    padding: 0.5rem 0;
+                    border-top: 1px solid $second;
+                }
+            }
+        }
+    }
+}

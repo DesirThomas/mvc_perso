@@ -28,10 +28,20 @@ class Message {
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 
-    public static function getMessageByName($messageName)
+    public static function deleteMessage( $messageId )
+    {
+        self::BddConnect();
+
+        $result = self::$connection->prepare( 'DELETE FROM messages WHERE id = :id' );
+        $result->execute( array(
+            'id' => $messageId,
+        ) );
+    }
+
+    /* public static function getMessageByName($messageName)
     {
         self::BddConnect();
         $result = self::$connection->query('SELECT * FROM messages where name = ' . $messageName);
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
-    }
+    } */
 }
