@@ -18,6 +18,27 @@ function indexAction(){
     require( 'views/love/index.php' );
 }
 
+function portfolioAction(){
+    isLogged();
+
+    $pageTitle = 'Gestion du Portfolio';
+    require( 'views/love/portfolio/portfolio.php' );
+}
+
+function contactAction(){
+    isLogged();
+
+    $pageTitle = 'Gestion des messages';
+    require( 'views/love/messages/messages.php' );
+}
+
+function livredorAction(){
+    isLogged();
+
+    $pageTitle = "Gestion du Livre d'or";
+    require( 'views/love/livredor/livredor.php' );
+}
+
 function eachotherAction(){
     if( isset( $_POST['loverconnect'] ) ) {
         $login    = htmlspecialchars($_POST['login']);

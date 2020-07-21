@@ -50,10 +50,9 @@
             </a>
             <nav id="navList">
                 <ul>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>" target="_blank" rel="noopener noreferrer"><i class="fas fa-vial"></i> $homepage <i class="fas fa-external-link-alt"></i></a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/portfolio"><i class="far fa-folder-open"></i>$portfolio</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/contact"><i class="far fa-envelope"></i> $messages </a></li>
-                    <li><a class="a-gold" href="<?php echo SITE_DIR;?>livredor"><i class="fas fa-book"></i> $livredor </a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/portfolio"><i class="far fa-folder-open"></i>$portfolio</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/contact"><i class="far fa-envelope"></i> $messages </a></li>
+                    <li><a class="a-gold" href="<?php echo SITE_DIR;?>love/livredor"><i class="fas fa-book"></i> $livredor </a></li>
                     <?php if( isset($_SESSION["isLogged"]) ) : ?>
                         <a class="a-nav" href="<?php echo SITE_DIR;?>love/logout"><i class="fas fa-skull-crossbones"></i> LogOut()</a></li>
                     <?php endif; ?>
