@@ -1,5 +1,7 @@
-<?php require('views/templates/_header.php');?>    
-<?php require('views/templates/_title.php');?>
+<?php
+require('views/templates/_header.php');    
+require('views/templates/_title.php');
+?>
 
 <form method="post">
     <div class="form_row">

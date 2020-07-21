@@ -1,5 +1,7 @@
-<?php require("views/love/_lovingheader.php");?>
-<?php require('views/templates/_title.php');?>
+<?php
+require("views/love/_lovingheader.php");
+require('views/templates/_title.php');
+?>
 
 <form method="post">
     <div class="form_row">
