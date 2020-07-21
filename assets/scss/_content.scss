@@ -32,6 +32,24 @@ body {
 
         .content {
             padding: 0 1rem 1rem 1rem;
+
+            .space {
+                margin-bottom: 2rem;
+
+                p{
+                    span {
+                        color: $prim;
+                    }
+                }
+            }
+
+            .right {
+                text-align : right;
+            }
+
+            .center {
+                text-align: center;
+            }
         }
     }
 }

@@ -74,9 +74,11 @@ html {
 
         button,
         .button {
-            padding: 10px 2rem;
+            margin: 1rem;
+            padding: 0.7rem 2rem;
             color: $second;
             text-decoration: none;
+            font-size: small;
             background-color: $black_t;
             border-top: $second_visited solid 1px;
             border-left: $second_visited solid 1px;

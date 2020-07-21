@@ -50,11 +50,12 @@
             </a>
             <nav id="navList">
                 <ul>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/"><i class="fas fa-vial"></i> $board</a></li>
                     <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/projects"><i class="far fa-folder-open"></i> $projects</a></li>
                     <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/messages"><i class="far fa-envelope"></i> $messages </a></li>
                     <li><a class="a-gold" href="<?php echo SITE_DIR;?>love/livredor"><i class="fas fa-book"></i> $livredor </a></li>
                     <?php if( isset($_SESSION["isLogged"]) ) : ?>
-                        <a class="a-nav" href="<?php echo SITE_DIR;?>love/logout"><i class="fas fa-skull-crossbones"></i> LogOut()</a></li>
+                        <a class="a-nav" href="<?php echo SITE_DIR;?>love/logout"><i class="fas fa-power-off"></i> LogOut()</a></li>
                     <?php endif; ?>
                 </ul>
             </nav>

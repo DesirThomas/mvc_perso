@@ -82,7 +82,7 @@ function addprojectAction(){
     }
     
     $pageTitle = 'Ajouter un projet';
-    require( 'views/love/projects/projetcs.php' );
+    require( 'views/love/projects/addproject.php' );
 }
 
 function editprojectAction(){
@@ -112,8 +112,21 @@ function editprojectAction(){
         header( 'Location: ' . SITE_DIR . 'love/projects/projects' . $project['id'] . '' );
     }
 
-    $pageTitle = 'Modifier un projet';
+    $pageTitle = 'Modifier le projet "' . $project['name'] . '"';
     require( 'views/love/projects/editproject.php' );
+}
+
+function deleteprojectAction(){
+    isLogged();
+
+    $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
+    $requestParams = explode( '/', $requestUri );
+    $projectId     = isset( $requestParams[2] ) ? $requestParams[2] : null;
+
+    Project::deleteProject( $projectId );
+
+    Header( 'Location: ' . SITE_DIR . 'love/projects' );
+
 }
 
 
