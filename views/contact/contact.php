@@ -17,7 +17,7 @@ require('views/templates/_title.php');
         <label for="pass">Adresse E-mail :</label>
     </div>
     <div class="form_row">
-        <input type="text" name="tel" id="tel" pattern="[0-9]{10,}" placeholder="0000000000+" />
+        <input type="tel" name="tel" id="tel" pattern="[0-9]{10,}" placeholder="0000000000+" />
         <label for="tel">Téléphone :</label>
     </div>
     <div class="form_row">
