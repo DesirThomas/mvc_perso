@@ -9,7 +9,7 @@
             tr{
                 th{
                     padding: 0.5rem 0;
-                    border-bottom: 1px solid $second;
+                    border-bottom: 1px solid $prim;
                 }
             }
         }
@@ -18,7 +18,7 @@
             tr {
                 td {
                     padding: 0.5rem 0.5rem;
-                    border-right: 1px solid $second;
+                    border-right: 1px solid $prim;
                 }
                 td:last-of-type {
                     border-right: none;	
@@ -29,8 +29,10 @@
         tfoot {
             tr {
                 th{
-                    padding: 0.5rem 0;
-                    border-top: 1px solid $second;
+                    padding: 2rem 0.5rem;
+                    border-top: 1px solid $prim;
+                    font-weight: unset;
+                    text-align: right;
                 }
             }
         }

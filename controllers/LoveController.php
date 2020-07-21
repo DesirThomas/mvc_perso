@@ -1,32 +1,125 @@
 <?php
 session_start();
-require_once( 'models/Contact.php' );
+require_once( 'models/Project.php' );
+require_once( 'models/Message.php' );
 require_once( 'models/Livredor.php' );
 require_once( 'models/Login.php' );
 
 function isLogged(){
-    // On vérifie si une session significative existe
     if( ! isset( $_SESSION['isLogged'] ) ) {
-        // Si non, on redirige vers le formulaire de login
         Header( 'Location: ' . SITE_DIR . 'love/eachother' );
     }
 }
 
 function indexAction(){
     isLogged();
-
+    
     $pageTitle = 'Tableau de bord';
     require( 'views/love/index.php' );
 }
 
-function portfolioAction(){
-    isLogged();
+function eachotherAction(){
+    if( isset( $_POST['loverconnect'] ) ) {
+        $login    = htmlspecialchars($_POST['login']);
+        $password = htmlspecialchars($_POST['pass']);
 
-    $pageTitle = 'Gestion du Portfolio';
-    require( 'views/love/portfolio/portfolio.php' );
+        $params = [
+            'login'     => $login,
+            'password' => $password,
+        ];
+
+        $result      = Login::Lover( $params );
+
+        if( $result ) {
+            $_SESSION['isLogged'] = $result['id']; // session creation
+        };
+
+        Header( 'Location: ' . SITE_DIR . 'love' );
+    }
+
+    $pageTitle = 'Tableau de bord';
+    $secondTitle = "&laquo; Don't forget to love each other &hearts; &raquo;";
+    require_once( 'views/love/eachother.php' );
 }
 
-function contactAction(){
+function logoutAction(){
+    session_destroy();
+    Header( 'Location: ' . SITE_DIR . 'love/eachother' );
+}
+
+
+// Gestion portfolio/project
+
+function projectsAction(){
+    isLogged();
+
+    $projects      = Project::getProjects();
+
+    $pageTitle = 'Gestion des Projets';
+    require( 'views/love/projects/projects.php' );
+}
+
+function addprojectAction(){
+    isLogged();
+    
+    if( isset( $_POST['addproject'] ) ) {
+
+        $name = htmlspecialchars( $_POST['name'] );
+        $img = htmlspecialchars( $_POST['img'] );
+        $txt = htmlspecialchars( $_POST['txt'] );
+        $link = htmlspecialchars( $_POST['link'] );
+
+        $params = array(
+            'name' => $name,
+            'img' => $img,
+            'txt' => $txt,
+            'link' => $link,
+        );
+
+        Project::addProject( $params );
+        
+        Header( 'Location: ' . SITE_DIR . 'love/projects/projects' );
+    }
+    
+    $pageTitle = 'Ajouter un projet';
+    require( 'views/love/projects/projetcs.php' );
+}
+
+function editprojectAction(){
+    isLogged();
+
+    $requestUri = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
+    $requestParams = explode( '/', $requestUri );
+    $projectId = isset( $requestParams[2] ) ? $requestParams[2] : null;
+
+    $project = Project::getProject( $projectId );
+
+    if( isset( $_POST['editproject'] ) ) {
+
+        $name = htmlspecialchars( $_POST['name'] );
+        $img = htmlspecialchars( $_POST['img'] );
+        $txt = htmlspecialchars( $_POST['txt'] );
+        $link = htmlspecialchars( $_POST['link'] );
+
+        $params = array(
+            'name' => $name,
+            'img' => $img,
+            'txt' => $txt,
+            'link' => $link,
+        );
+
+        Project::editProject( $projectId, $params );
+        header( 'Location: ' . SITE_DIR . 'love/projects/projects' . $project['id'] . '' );
+    }
+
+    $pageTitle = 'Modifier un projet';
+    require( 'views/love/projects/editproject.php' );
+}
+
+
+// Gestion Contact/Message
+
+function messagesAction(){
     isLogged();
 
     $messages      = Message::getMessages();
@@ -60,43 +153,12 @@ function deletemessageAction(){
 
 }
 
+
+// Gestion Livre d'or
+
 function livredorAction(){
     isLogged();
 
     $pageTitle = "Gestion du Livre d'or";
     require( 'views/love/livredor/livredor.php' );
-}
-
-function eachotherAction(){
-    if( isset( $_POST['loverconnect'] ) ) {
-        $login    = htmlspecialchars($_POST['login']);
-        $password = htmlspecialchars($_POST['pass']);
-
-        $params = [
-            'login'     => $login,
-            'password' => $password,
-        ];
-
-        $result      = Login::Lover( $params );
-
-        if( $result ) {
-            // On crée la session
-            $_SESSION['isLogged'] = $result['id'];
-        };
-
-        // On redirige vers le tableau de bord
-        Header( 'Location: ' . SITE_DIR . 'love' );
-    }
-
-    $pageTitle = 'Tableau de bord';
-    $secondTitle = "&laquo; Don't forget to love each other &hearts; &raquo;";
-    require_once( 'views/love/eachother.php' );
-}
-
-function logoutAction(){
-    // 1. Détruire la session
-    session_destroy();
-
-    // 2. Redirection vers la page login
-    Header( 'Location: ' . SITE_DIR . 'love/eachother' );
 }

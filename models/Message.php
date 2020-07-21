@@ -1,7 +1,7 @@
 <?php
 require_once( 'models/Database.php' );
 
-// this class is used for stock message send with "contact/contact.php"
+// this model is used for show/delete messages send with "contact/contact.php"
 class Message {
     
     public static $connection;

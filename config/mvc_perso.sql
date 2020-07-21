@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 20 juil. 2020 à 17:27
+-- Généré le : mar. 21 juil. 2020 à 17:48
 -- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
 -- Version de PHP : 7.4.8
 
@@ -73,22 +73,32 @@ CREATE TABLE `messages` (
   `name` varchar(255) NOT NULL,
   `firstname` varchar(255) DEFAULT NULL,
   `mail` varchar(255) NOT NULL,
+  `tel` varchar(255) DEFAULT NULL,
   `subject` varchar(255) NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `firstname`, `mail`, `tel`, `subject`, `message`) VALUES
+(1, 'Pouet', 'Bernard', 'pouet@pouet.com', '611223344', 'Pouetpouet', 'txtpouet'),
+(2, 'M.Test', 'Man', 'test@test.com', '555112233', 'Projet Test', 'Bonjour, blablabla');
+
 -- --------------------------------------------------------
 
 --
--- Structure de la table `portfolio`
+-- Structure de la table `projects`
 --
 
-DROP TABLE IF EXISTS `portfolio`;
-CREATE TABLE `portfolio` (
+DROP TABLE IF EXISTS `projects`;
+CREATE TABLE `projects` (
   `id` int(11) NOT NULL,
-  `project_name` varchar(255) NOT NULL,
-  `project_text` text NOT NULL,
-  `project_link` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `txt` text NOT NULL,
+  `link` varchar(255) NOT NULL,
   `creation_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -115,9 +125,9 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `portfolio`
+-- Index pour la table `projects`
 --
-ALTER TABLE `portfolio`
+ALTER TABLE `projects`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -140,12 +150,12 @@ ALTER TABLE `lovers`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `portfolio`
+-- AUTO_INCREMENT pour la table `projects`
 --
-ALTER TABLE `portfolio`
+ALTER TABLE `projects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

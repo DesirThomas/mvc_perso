@@ -61,12 +61,22 @@ html {
                     color: $tri-hover;
                 }
             }
+
+            &.a-beware{
+                color: $beware;
+                text-decoration: none;
+
+                &:hover {
+                    color: $beware-hover;
+                }
+            }
         }
 
         button,
         .button {
             padding: 10px 2rem;
             color: $second;
+            text-decoration: none;
             background-color: $black_t;
             border-top: $second_visited solid 1px;
             border-left: $second_visited solid 1px;
@@ -90,7 +100,7 @@ html {
         }
 
         hr {
-            border: 1px solid $second;
+            border: 1px solid $prim;
             box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4);
 
             &.hr-top {
