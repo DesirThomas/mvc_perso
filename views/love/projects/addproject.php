@@ -13,6 +13,10 @@ require('views/templates/_title.php');
         <label for="img">Image :</label>
     </div>
     <div class="form_row">
+        <input type="text" name="img_alt" id="img_alt" value="<?php echo $project['img_alt']; ?>" />
+        <label for="img_alt">Description de l'image :</label>
+    </div>
+    <div class="form_row">
         <textarea type="text" name="txt" id="txt" required></textarea>
         <label for="txt">Texte :</label>
     </div>

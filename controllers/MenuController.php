@@ -1,4 +1,5 @@
 <?php
+require_once('models/Project.php');
 
 function indexAction() {
     $pageTitle = 'Bienvenue';
@@ -22,6 +23,8 @@ function competenceAction() {
 }
 
 function portfolioAction() {
+    $projects = Project::getProjects();
+
     $pageTitle = 'Portfolio';
     $secondTitle = '#Noob';
     require('views/portfolio/portfolio.php');

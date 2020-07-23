@@ -1,0 +1,17 @@
+.project {
+    display: column;
+
+    .preview {
+        width: 40vw;
+        min-width: 40vw;
+        max-height: auto;
+        border: 2px solid $prim;
+        box-shadow: 6px 6px 2px 1px rgba(0, 0, 0, .4);
+    }
+
+    .text-project {
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+
+}

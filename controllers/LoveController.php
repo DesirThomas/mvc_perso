@@ -37,7 +37,7 @@ function eachotherAction(){
         Header( 'Location: ' . SITE_DIR . 'love' );
     }
 
-    $pageTitle = 'Tableau de bord';
+    $pageTitle = 'LogIn()';
     $secondTitle = "&laquo; Don't forget to love each other &hearts; &raquo;";
     require_once( 'views/love/eachother.php' );
 }
@@ -66,12 +66,14 @@ function addprojectAction(){
 
         $name = htmlspecialchars( $_POST['name'] );
         $img = htmlspecialchars( $_POST['img'] );
+        $img_alt = htmlspecialchars( $_POST['img_alt'] );
         $txt = htmlspecialchars( $_POST['txt'] );
         $link = htmlspecialchars( $_POST['link'] );
 
         $params = array(
             'name' => $name,
             'img' => $img,
+            'img_alt' => $img_alt,
             'txt' => $txt,
             'link' => $link,
         );
@@ -98,12 +100,14 @@ function editprojectAction(){
 
         $name = htmlspecialchars( $_POST['name'] );
         $img = htmlspecialchars( $_POST['img'] );
+        $img_alt = htmlspecialchars( $_POST['img_alt'] );
         $txt = htmlspecialchars( $_POST['txt'] );
         $link = htmlspecialchars( $_POST['link'] );
 
         $params = array(
             'name' => $name,
             'img' => $img,
+            'img_alt' => $img_alt,
             'txt' => $txt,
             'link' => $link,
         );

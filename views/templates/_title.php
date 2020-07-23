@@ -1,5 +1,5 @@
             <div class="h2">
-                <i class="fas fa-terminal"></i> <p><?php if(!empty($secondTitle)) echo $secondTitle; elseif(!empty($pageTitle)) echo $pageTitle ?></p>
+                <i class="fas fa-terminal"></i> <p><?php echo (!empty($secondTitle) ? $secondTitle : $pageTitle);?></p>
             </div>
 
             <div class="content">

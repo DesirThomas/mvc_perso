@@ -31,14 +31,14 @@ class Project {
     public static function addProject( $params )
     {
         self::BddConnect();
-        $result = self::$connection->prepare( 'INSERT INTO projects(name, img, txt, link) VALUES( :name, :img, :txt, :link )' );
+        $result = self::$connection->prepare( 'INSERT INTO projects(name, img, img_alt, txt, link) VALUES( :name, :img, :img_alt, :txt, :link )' );
         $result->execute( $params );
     }
 
     public static function editProject($projectId, $params)
     {
         self::BddConnect();
-        $result = self::$connection->prepare("UPDATE projects SET name = :name , img = :img , txt = :txt , link = :link where id = $projectId");
+        $result = self::$connection->prepare("UPDATE projects SET name = :name , img = :img , img_alt = :img_alt, txt = :txt , link = :link where id = $projectId");
         $result -> execute($params);
     }
 

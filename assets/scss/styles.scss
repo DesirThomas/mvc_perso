@@ -17,6 +17,7 @@
 @import "footer";
 @import "form";
 @import "table";
+@import "project";
 
 // Basic Layout
 html {
@@ -106,15 +107,15 @@ html {
             box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4);
 
             &.hr-top {
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
             }
 
             &.hr-mid {
-                margin: 1rem 0;
+                margin: 2rem 0;
             }
 
             &.hr-bottom {
-                margin-top: 1rem;
+                margin-top: 2rem;
             }
         }
     }
