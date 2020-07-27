@@ -57,7 +57,8 @@ require('views/templates/_title.php');
     
     <div class="info-skill">
         <h3>SQL</h3>                
-        <p>C'est le bidule qui sert aux fonctionnalités du site.</p>
+        <p>C'est le langage qui permet de communiquer et exploiter les bases de donnée.</p>
+        <p>Au contraire de cette page par exemple, les différents projets de mon <a class="a-content" href="<?php echo SITE_DIR;?>menu/portfolio/"><i class="far fa-folder-open"></i> Portfolio</a> sont visibles car ils sont inscrits dans une base de donnée.</p>
     </div>
 </div>
 

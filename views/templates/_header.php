@@ -26,16 +26,7 @@
 
         <!-- Script JS -->
         <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
-        <script>
-			function burger() {
-				let nav = document.getElementById("navList");
-				if (nav.style.display === "inline") {
-					nav.style.display = "";
-				} else {
-					nav.style.display = "inline";
-				}
-			}
-		</script>
+        <script src="<?php echo SITE_DIR;?>assets/js/burger.js"></script>
     </head>
 
     <body>
