@@ -89,6 +89,16 @@
             -webkit-background-clip: text;
             color: transparent;
         }
+
+        // JS
+        #dyna-clock {
+            padding: 0.5rem 0;
+            width: 100%;
+            border: 2px inset $light;
+            text-align: center;
+            color: $second;
+            box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, .4);
+        }
     }
 
 }

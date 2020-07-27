@@ -34,7 +34,8 @@ require('views/templates/_title.php');
     
     <div class="info-skill">
         <h3>Javascript</h3>                
-        <textarea>C'est le bidule qui sert à rendre dynamique le site.</textarea>
+        <p>C'est le bidule qui sert à rendre dynamique le site.</p>
+        <p id="dyna-clock"></p>
     </div>
 </div>
 
@@ -78,4 +79,5 @@ require('views/templates/_title.php');
     </ul>
 </div>
 
+<script src="<?php echo SITE_DIR;?>assets/js/clock.js"></script>
 <?php require('views/templates/_footer.php');?>
