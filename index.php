@@ -8,7 +8,7 @@ $requestUri = str_replace(SITE_DIR, '', $_SERVER['REQUEST_URI']);
 
 $requestParams = explode('/', $requestUri);
 
-$controller = (!empty($requestParams[0]) ? ucfirst($requestParams[0])  : 'Accueil'). 'Controller';
+$controller = (!empty($requestParams[0]) ? ucfirst($requestParams[0])  : 'Menu'). 'Controller';
 $action = (!empty($requestParams[1]) ? $requestParams[1] : 'index'). 'Action';
 
 if (file_exists('controllers/'. $controller . '.php')) {

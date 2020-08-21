@@ -1,11 +1,26 @@
 $white: #ffffff;
+$white_t: #ffffff9d;
 $light: #f0f0f0;
+$light_t: #f0f0f09d;
 
 $black: #000000;
 $black_t: #0000009d;
 $dark: #222222;
+$dark_t: #2222229d;
 
-// a
-$a: #9acd32;
-$a-hover: #83af2c;
-$a-visited: #b9e267;
+// Color primary: <a> header/footer ;
+$prim: #00dcff;
+$prim-hover: #00b4cf;
+
+// Color secondary: content ; <a> content ;
+$second: #9acd32;
+$second-hover: #83af2c;
+$second-visited: #b9e267;
+
+// Color tertiaire: <a> .a-gold ;
+$tri: #daab2a;
+$tri-hover: #a87f27;
+
+// Color "Beware": <a> delete ;
+$beware: #da2a2a;
+$beware-hover: #a82727;

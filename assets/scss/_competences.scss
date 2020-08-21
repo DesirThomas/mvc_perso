@@ -1,0 +1,124 @@
+.skill {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    @include responsive('sm'){
+        flex-direction: row;
+    }
+
+    .i{
+        display: inline-block;
+        text-align: center;
+        color: $prim;
+        width: 100%;
+        margin-bottom: 1rem;
+        @include responsive('sm'){
+            width: 10vw;
+            margin-bottom: 0;
+        }
+        
+        i {
+            font-size: 7em;
+
+            &.fa-php {
+                font-size: 5em;
+            }
+        }
+    }
+
+    
+    .info-skill {
+        flex-direction: column;
+        width: 100%;
+        @include responsive('sm'){
+            margin-left: 2rem;
+        }
+
+        h3 {
+            margin: 0 0 1rem;
+            color: $prim;
+            text-align: center;
+            @include responsive('sm'){
+                text-align: left;
+            }
+        }
+        
+        // HTML
+        textarea {
+            padding: 0.5rem 0;
+            width: 100%;
+            min-height: 10vh;
+            border: 1px inset $second;
+            background-color: $dark;
+            color: $light;
+            box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, .4);
+            
+            &:focus {
+                outline: 1px solid $second-visited;
+            }
+        }
+
+        // CSS
+        .exemple-div-anim {
+            padding: 0.5rem;
+            margin-left: 25%;
+            margin-right: 25%;
+            border: 1px inset violet;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4); 
+            transition-duration: 1s;
+
+            p{
+                transition-duration: 1s;
+            }
+
+            &:hover {
+                padding: 1rem;
+                margin: 0;
+                border: 6px inset orange;
+                box-shadow: 6px 6px 2px 1px rgba(0, 0, 0, .4);
+                
+                p{
+                    margin-left: 15%;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .pinky-text {
+            background-image: linear-gradient(to left, violet, orange);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        // JS
+        #dyna-clock {
+            padding: 0.5rem 0;
+            width: 100%;
+            border: 2px inset $light;
+            text-align: center;
+            color: $second;
+            box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, .4);
+        }
+    }
+
+}
+
+// Last "skills"
+.iknow, .initiate {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    ul{
+        padding: 0;
+
+        li{
+            color: $prim;
+            display: block;
+            margin: 1rem 0;
+            @include responsive('sm'){
+                display: inline;
+                margin: 0 1rem;
+            }
+        }
+    }
+}

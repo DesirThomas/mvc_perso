@@ -1,3 +1,11 @@
+/* Where h* ?
+ * h1 (_header.scss)
+ * h2 (_content.scss)
+ *
+ * What is define in here ?
+ * a ; button ; hr
+ */
+
 // Base Imports
 @import "variables/fonts";
 @import "variables/colors";
@@ -7,6 +15,10 @@
 @import "header";
 @import "content";
 @import "footer";
+@import "form";
+@import "table";
+@import "portfolio";
+@import "competences";
 
 // Basic Layout
 html {
@@ -20,23 +32,92 @@ html {
         color: $light;
 
         a {
-            color: $a;
+            color: $second;
 
             &:hover {
-                color: $a-hover;
+                color: $second-hover;
             }
 
             &:visited {
-                color: $a-visited;
+                color: $second-visited;
 
                 &:hover {
-                    color: $a-hover;
+                    color: $second-hover;
+                }
+            }
+
+            &.a-nav{
+                color: $prim;
+                text-decoration: none;
+
+                &:hover {
+                    color: $prim-hover;
+                }
+            }
+
+            &.a-gold{
+                color: $tri;
+                text-decoration: none;
+
+                &:hover {
+                    color: $tri-hover;
+                }
+            }
+
+            &.a-beware{
+                color: $beware;
+                text-decoration: none;
+
+                &:hover {
+                    color: $beware-hover;
                 }
             }
         }
 
-        button {
+        button,
+        .button {
+            margin: 1rem;
+            padding: 0.7rem 2rem;
+            color: $second;
+            text-decoration: none;
+            font-size: small;
+            background-color: $black_t;
+            border-top: $second_visited solid 1px;
+            border-left: $second_visited solid 1px;
+            border-bottom: $second_hover solid 3px;
+            border-right: $second_hover solid 3px;
+            box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, .4);
             cursor: pointer;
+
+            &:hover {
+                background-color: $black;
+            }
+
+            &:active {
+                background-color: $black_t;
+                box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .4);
+            }
+
+            &:focus {
+                outline: 1px solid $second-visited;
+            }
+        }
+
+        hr {
+            border: 1px solid $prim;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4);
+
+            &.hr-top {
+                margin-bottom: 2rem;
+            }
+
+            &.hr-mid {
+                margin: 2rem 0;
+            }
+
+            &.hr-bottom {
+                margin-top: 2rem;
+            }
         }
     }
 }

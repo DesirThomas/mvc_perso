@@ -1,6 +1,11 @@
 <?php require('views/templates/_header.php');?>
+    <div class="h2">
+        <i class="fas fa-terminal"></i> <h2>Accueil</h2>
+    </div>
+            
+    <div class="content">
+        <hr class="hr-top" />
 
-            <h1>Accueil</h1>
+        <a href="<?php echo SITE_DIR;?>"><i class="fas fa-vial"></i> Accueil</a>
 
-            <!-- Content -->
 <?php require('views/templates/_footer.php');?>

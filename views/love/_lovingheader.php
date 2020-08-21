@@ -26,14 +26,23 @@
 
         <!-- Script JS -->
         <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
-        <script src="<?php echo SITE_DIR;?>assets/js/burger.js"></script>
+        <script>
+			function burger() {
+				let nav = document.getElementById("navList");
+				if (nav.style.display === "inline") {
+					nav.style.display = "";
+				} else {
+					nav.style.display = "inline";
+				}
+			}
+		</script>
     </head>
 
     <body>
 		<header>
             <div class="logo_h1">
-                <a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-flask" alt="logo"></i></a>
-                <h1><?php if(!empty($pageTitle)) echo $pageTitle ?></h1>
+                <a class="a-nav" href="<?php echo SITE_DIR;?>love"><i class="fas fa-flask" alt="logo"></i></a>
+                <h1>&lsaquo;?php $h1 = "<?php if(!empty($pageTitle)) echo $pageTitle ?>";</h1>
             </div>
 
             <a href="javascript:void(0);" class="burger" onclick="burger()">
@@ -41,11 +50,13 @@
             </a>
             <nav id="navList">
                 <ul>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>"><i class="fas fa-vial"></i> Accueil</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/bio/"><i class="far fa-user-circle"></i> Biographie</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/competence/"><i class="fas fa-code"></i> Compétences</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/portfolio/"><i class="far fa-folder-open"></i> Portfolio</a></li>
-                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>menu/contact/"><i class="far fa-envelope"></i> Contact</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/"><i class="fas fa-vial"></i> $board</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/projects"><i class="far fa-folder-open"></i> $projects</a></li>
+                    <li><a class="a-nav" href="<?php echo SITE_DIR;?>love/messages"><i class="far fa-envelope"></i> $messages </a></li>
+                    <li><a class="a-gold" href="<?php echo SITE_DIR;?>love/livredor"><i class="fas fa-book"></i> $livredor </a></li>
+                    <?php if( isset($_SESSION["isLogged"]) ) : ?>
+                        <a class="a-nav" href="<?php echo SITE_DIR;?>love/logout"><i class="fas fa-power-off"></i> LogOut()</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
 

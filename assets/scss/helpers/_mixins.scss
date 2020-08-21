@@ -1,18 +1,18 @@
 @mixin responsive($device) {
     @if $device == xs {
-        @media (max-width: 767px) {
+        @media (min-width: 767px) {
         @content;
         }
     } @else if $device == sm {
-        @media (min-width: 768px) {
+        @media (min-width: 1023px) {
         @content;
         }
     } @else if $device == md {
-        @media (min-width: 1024px) {
+        @media (min-width: 1919px) {
         @content;
         }
     } @else if $device == lg {
-        @media (min-width: 1920px) {
+        @media (max-width: 1920px) {
         @content;
         }
     }
