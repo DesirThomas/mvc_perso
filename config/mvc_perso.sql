@@ -21,8 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `mvc_perso`
 --
-CREATE DATABASE IF NOT EXISTS `mvc_tdesir_perso` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `mvc_tdesir_perso`;
+CREATE DATABASE IF NOT EXISTS `mvc_perso` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `mvc_perso`;
 
 -- --------------------------------------------------------
 

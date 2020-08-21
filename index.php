@@ -2,11 +2,11 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('SITE_DIR','/');
+define('SITE_DIR','/mvc_perso/');
 
-$requestUri = $_SERVER['REQUEST_URI'];
+$requestUri = str_replace(SITE_DIR, '', $_SERVER['REQUEST_URI']);
 
-$requestParams = array_slice(explode('/', $requestUri), 1);
+$requestParams = explode('/', $requestUri);
 
 $controller = (!empty($requestParams[0]) ? ucfirst($requestParams[0])  : 'Menu'). 'Controller';
 $action = (!empty($requestParams[1]) ? $requestParams[1] : 'index'). 'Action';
